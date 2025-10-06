@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 COPY package.json /app
-RUN npm install --force
+RUN RUN npm install -g npm@latest
 COPY . /app
 
 COPY ./entrypoint.sh /tmp/entrypoint.sh
